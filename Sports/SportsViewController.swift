@@ -82,7 +82,7 @@ extension SportsViewController: UICollectionViewDataSource{
 
 extension SportsViewController:UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        //        let collectionViewSize = collectionView.frame.size.width / 2
+        //make size half width
         let size = (collectionView.frame.size.width - 10) / 2
         
         return CGSize(width: size, height: size)
