@@ -39,9 +39,9 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="128" height="182"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXF-ry-9ll">
-                                                    <rect key="frame" x="0.0" y="164" width="128" height="18"/>
+                                                    <rect key="frame" x="0.0" y="160.33333333333334" width="128" height="21.666666666666657"/>
                                                     <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -76,6 +76,83 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2540.1869158878503" y="-341.46868250539961"/>
+        </scene>
+        <!--Leagues View Controller-->
+        <scene sceneID="onl-oQ-ZtJ">
+            <objects>
+                <viewController storyboardIdentifier="LeaguesViewController" id="hsp-vK-SxV" customClass="LeaguesViewController" customModule="Sports" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I6n-Fb-Bl8">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4ht-gy-HE0">
+                                <rect key="frame" x="0.0" y="44" width="428" height="848"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="143" id="cRo-z0-Cvv" customClass="LeagueTableViewCell" customModule="Sports" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="428" height="143"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cRo-z0-Cvv" id="1mO-b4-ad8">
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="143"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sSp-Lf-P59">
+                                                    <rect key="frame" x="30" y="21.666666666666671" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="b1D-Re-Ufv"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWW-2T-Jee">
+                                                    <rect key="frame" x="140" y="47" width="215" height="49"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-youtube-50" translatesAutoresizingMaskIntoConstraints="NO" id="2Z2-ap-EDZ">
+                                                    <rect key="frame" x="363" y="82" width="39" height="39"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="39" id="1ep-sF-kqf"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="2Z2-ap-EDZ" secondAttribute="bottom" constant="11" id="Abg-P0-XoH"/>
+                                                <constraint firstItem="qWW-2T-Jee" firstAttribute="leading" secondItem="sSp-Lf-P59" secondAttribute="trailing" constant="10" id="FO6-hf-rIi"/>
+                                                <constraint firstItem="qWW-2T-Jee" firstAttribute="top" secondItem="1mO-b4-ad8" secondAttribute="topMargin" constant="36" id="M1o-jK-bNL"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="2Z2-ap-EDZ" secondAttribute="trailing" constant="6" id="Mbk-kc-nH5"/>
+                                                <constraint firstItem="sSp-Lf-P59" firstAttribute="centerY" secondItem="1mO-b4-ad8" secondAttribute="centerY" id="XrF-Wb-Rnb"/>
+                                                <constraint firstItem="2Z2-ap-EDZ" firstAttribute="leading" secondItem="qWW-2T-Jee" secondAttribute="trailing" constant="8" symbolic="YES" id="ZJo-6Z-v5F"/>
+                                                <constraint firstItem="sSp-Lf-P59" firstAttribute="centerY" secondItem="qWW-2T-Jee" secondAttribute="centerY" id="elY-sR-l80"/>
+                                                <constraint firstItem="2Z2-ap-EDZ" firstAttribute="top" secondItem="1mO-b4-ad8" secondAttribute="topMargin" constant="71" id="pA2-kE-sdj"/>
+                                                <constraint firstItem="sSp-Lf-P59" firstAttribute="top" secondItem="1mO-b4-ad8" secondAttribute="topMargin" constant="10.666666666666671" id="wpf-zI-cgM"/>
+                                                <constraint firstItem="sSp-Lf-P59" firstAttribute="leading" secondItem="1mO-b4-ad8" secondAttribute="leadingMargin" constant="10" id="wxO-Sp-OSe"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="leagueImage" destination="sSp-Lf-P59" id="fc1-4B-LEU"/>
+                                            <outlet property="leagueName" destination="qWW-2T-Jee" id="9yz-Q0-rS8"/>
+                                            <outlet property="leagueYTCahnnel" destination="2Z2-ap-EDZ" id="47g-Fr-r7l"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Oi9-zj-dGa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4ht-gy-HE0" secondAttribute="trailing" id="AYm-8j-XX0"/>
+                            <constraint firstItem="4ht-gy-HE0" firstAttribute="leading" secondItem="I6n-Fb-Bl8" secondAttribute="leading" id="H8f-r5-Wk6"/>
+                            <constraint firstItem="4ht-gy-HE0" firstAttribute="bottom" secondItem="Oi9-zj-dGa" secondAttribute="bottom" id="n5V-jR-qsU"/>
+                            <constraint firstItem="4ht-gy-HE0" firstAttribute="top" secondItem="Oi9-zj-dGa" secondAttribute="top" id="nSZ-MT-Vnc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="leagueTableView" destination="4ht-gy-HE0" id="F3u-Gw-xJr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TRG-t9-7oT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3267.7570093457944" y="-341.46868250539961"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Rhu-oj-uDd">
@@ -134,6 +211,7 @@
     <resources>
         <image name="icons8-heart-outline-25" width="25" height="25"/>
         <image name="icons8-soccer-25-2" width="25" height="25"/>
+        <image name="icons8-youtube-50" width="50" height="50"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
