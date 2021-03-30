@@ -56,10 +56,10 @@ class LeaguesViewController: UIViewController {
                 var response:LeagueDetails?
                 do{
                     response = try JSONDecoder().decode(LeagueDetails.self,from: result!)
-                   
+                    
                     self.lastLeagueList.append(response!.leagues![0])
                     self.leagueTableView.reloadData()
-
+                    
                 }catch{
                     print(error)
                 }
@@ -73,6 +73,7 @@ struct LeagueDetails:Codable{
 }
 
 struct Detail:Codable{
+    var idLeague:String?
     var strLeague:String?
     var strYoutube:String?
     var strBadge:String?
@@ -90,7 +91,19 @@ struct League:Codable{
 
 extension LeaguesViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Hi Ahmed")
+        let leagueDetailsViewController = self.storyboard?.instantiateViewController(identifier: "LeagueDetailsViewController") as! LeagueDetailsViewController
+        
+        /*send name of sport to leagues view
+         to get only items related to this sport*/
+        leagueDetailsViewController.leagueId = lastLeagueList[indexPath.row].idLeague
+        
+        leagueDetailsViewController.leagueName = lastLeagueList[indexPath.row]
+            .strLeague
+        
+        leagueDetailsViewController.leagueIamge = lastLeagueList[indexPath.row]
+            .strBadge
+        
+        self.navigationController?.pushViewController(leagueDetailsViewController, animated: true)
     }
 }
 
@@ -112,6 +125,10 @@ extension LeaguesViewController: UITableViewDataSource{
         cell.leagueImage.sd_setImage(with: URL(string: league.strBadge ?? urlDefaultImage), placeholderImage:UIImage(named: "image"))
         
         cell.leagueImage.roundedImage()
+        
+        if (league.strYoutube!.isEmpty){
+            cell.leagueYTCahnnel.isHidden = true
+        }
         return cell
     }
     
